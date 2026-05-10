@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riwaayat — Handmade with Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="riwaayat_css.css" />
+</head>
+<body class="light-mode">
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-petal" style="--i:0"></div>
+      <div class="loader-petal" style="--i:1"></div>
+      <div class="loader-petal" style="--i:2"></div>
+      <div class="loader-petal" style="--i:3"></div>
+      <div class="loader-petal" style="--i:4"></div>
+      <div class="loader-petal" style="--i:5"></div>
+    </div>
+    <p class="loader-text">Riwaayat</p>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-decor">✿</span> Riwaayat
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#custom">Custom</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#instagram">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon">☽</span>
+        </button>
+        <button class="search-btn" id="search-btn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="cart-btn" id="cart-btn" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search products…" autocomplete="off" />
+      <button class="search-close" id="search-close">✕</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Basket 🌸</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">
+        <div class="cart-empty-icon">🌷</div>
+        <p>Your basket is empty</p>
+        <span>Add something beautiful!</span>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-price">₹0</span>
+      </div>
+      <button class="btn-checkout" id="checkout-btn">
+        Checkout via WhatsApp 💬
+      </button>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="hero-blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up">✿ Handcrafted with soul</p>
+      <h1 class="hero-title fade-up">
+        <span class="title-script">Riwaayat</span>
+      </h1>
+      <p class="hero-tagline fade-up">
+        Handmade with love,<br/>stitched with tradition.
+      </p>
+      <div class="hero-cta fade-up">
+        <a href="#products" class="btn-primary">Explore Collection</a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-badges fade-up">
+        <div class="badge">🌸 100% Handmade</div>
+        <div class="badge">✨ Custom Orders</div>
+        <div class="badge">💝 Made with Love</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <div class="hero-flowers">
+          <div class="flower f1">🌸</div>
+          <div class="flower f2">🌷</div>
+          <div class="flower f3">🌼</div>
+          <div class="flower f4">💮</div>
+          <div class="flower f5">🏵️</div>
+          <div class="flower f6">🌹</div>
+        </div>
+        <div class="hero-card-visual">
+          <div class="visual-sticker sticker-1">✿ handmade</div>
+          <div class="visual-sticker sticker-2">made with 💗</div>
+          <div class="visual-price">from ₹199</div>
+          <div class="hero-image-placeholder">
+            <div class="craft-animation">
+              <div class="thread thread-1"></div>
+              <div class="thread thread-2"></div>
+              <div class="crochet-icon">🧶</div>
+              <div class="needle-icon">🪡</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-dot"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual fade-left">
+          <div class="about-image-wrap">
+            <div class="about-img-placeholder">
+              <div class="about-art">
+                <div class="art-ring ring-outer"></div>
+                <div class="art-ring ring-middle"></div>
+                <div class="art-center">🌸</div>
+              </div>
+            </div>
+            <div class="about-tag tag-1">✿ Est. 2024</div>
+            <div class="about-tag tag-2">100% Handmade</div>
+          </div>
+        </div>
+        <div class="about-content fade-right">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title">Where Every Stitch Tells a Story</h2>
+          <p class="about-text">
+            Riwaayat — meaning <em>"tradition"</em> — was born from a college student's deep love for handcraft and the timeless art of crochet and embroidery. What started as a quiet hobby between study sessions blossomed into a small, heartfelt brand that celebrates the beauty of things made entirely by hand.
+          </p>
+          <p class="about-text">
+            Every flower crocheted, every keychain woven, every bouquet assembled carries a piece of that love and intention. We believe handmade isn't just a style — it's a feeling. A warmth you can hold, a memory you can keep.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">200+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Unique Designs</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Handcrafted</span>
+            </div>
+          </div>
+          <a href="#products" class="btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Our Collection</p>
+        <h2 class="section-title">Handpicked Just for You</h2>
+        <p class="section-sub">Each piece is lovingly crafted by hand — no two are ever exactly alike.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="crochet">Crochet</button>
+        <button class="filter-btn" data-filter="bouquet">Bouquets</button>
+        <button class="filter-btn" data-filter="keychain">Keychains</button>
+        <button class="filter-btn" data-filter="embroidery">Embroidery</button>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+
+        <div class="product-card" data-category="bouquet" data-id="1" data-name="Crochet Rose Bouquet" data-price="599">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-1">
+              <div class="product-emoji">🌹🌹🌷</div>
+            </div>
+            <div class="product-badge">Bestseller</div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bouquet</p>
+            <h3 class="product-name">Crochet Rose Bouquet</h3>
+            <p class="product-desc">A dreamy bouquet of hand-crocheted roses in soft blush tones — perfect as a forever gift.</p>
+            <div class="product-footer">
+              <span class="product-price">₹599</span>
+              <div class="product-actions">
+                <button class="btn-cart" onclick="addToCart(1, 'Crochet Rose Bouquet', 599)">Add to Cart</button>
+                <button class="btn-buynow" onclick="buyNow(1, 'Crochet Rose Bouquet', 599)">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="crochet" data-id="2" data-name="Lavender Tulip Set" data-price="449">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-2">
+              <div class="product-emoji">🌷💜🌷</div>
+            </div>
+            <div class="product-badge new-badge">New</div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Crochet</p>
+            <h3 class="product-name">Lavender Tulip Set</h3>
+            <p class="product-desc">A set of three delicate crochet tulips in lavender and lilac — soft, whimsical, and timeless.</p>
+            <div class="product-footer">
+              <span class="product-price">₹449</span>
+              <div class="product-actions">
+                <button class="btn-cart" onclick="addToCart(2, 'Lavender Tulip Set', 449)">Add to Cart</button>
+                <button class="btn-buynow" onclick="buyNow(2, 'Lavender Tulip Set', 449)">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="keychain" data-id="3" data-name="Woven Heart Keychain" data-price="199">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-3">
+              <div class="product-emoji">🔑💗🧶</div>
+            </div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Keychain</p>
+            <h3 class="product-name">Woven Heart Keychain</h3>
+            <p class="product-desc">A charming hand-woven heart keychain — a tiny piece of art you carry everywhere you go.</p>
+            <div class="product-footer">
+              <span class="product-price">₹199</span>
+              <div class="product-actions">
+                <button class="btn-cart" onclick="addToCart(3, 'Woven Heart Keychain', 199)">Add to Cart</button>
+                <button class="btn-buynow" onclick="buyNow(3, 'Woven Heart Keychain', 199)">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="crochet" data-id="4" data-name="Handmade Daisy Flower" data-price="279">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-4">
+              <div class="product-emoji">🌼🌼🌼</div>
+            </div>
+            <div class="product-badge">Popular</div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Crochet</p>
+            <h3 class="product-name">Handmade Daisy Flower</h3>
+            <p class="product-desc">Cheerful hand-crocheted daisies in cream and yellow — sunshine you can hold in your hands.</p>
+            <div class="product-footer">
+              <span class="product-price">₹279</span>
+              <div class="product-actions">
+                <button class="btn-cart" onclick="addToCart(4, 'Handmade Daisy Flower', 279)">Add to Cart</button>
+                <button class="btn-buynow" onclick="buyNow(4, 'Handmade Daisy Flower', 279)">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="embroidery" data-id="5" data-name="Embroidered Mini Hoop" data-price="349">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-5">
+              <div class="product-emoji">🪡✨🌸</div>
+            </div>
+            <div class="product-badge new-badge">New</div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Embroidery</p>
+            <h3 class="product-name">Embroidered Mini Hoop</h3>
+            <p class="product-desc">A miniature embroidery hoop featuring hand-stitched floral art — a wall décor piece and keepsake.</p>
+            <div class="product-footer">
+              <span class="product-price">₹349</span>
+              <div class="product-actions">
+                <button class="btn-cart" onclick="addToCart(5, 'Embroidered Mini Hoop', 349)">Add to Cart</button>
+                <button class="btn-buynow" onclick="buyNow(5, 'Embroidered Mini Hoop', 349)">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="bouquet" data-id="6" data-name="Mixed Blossom Bouquet" data-price="749">
+          <div class="product-img-wrap">
+            <div class="product-img product-img-6">
+              <div class="product-emoji">💐🌸🌹</div>
+            </div>
+            <button class="product-wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Bouquet</p>
+            <h3 class="product-name">Mixed Blossom Bouquet</h3>
+            <p class="product-desc">A lush mixed bouquet of crocheted roses, daisies, and tulips — a forever bouquet that never wilts.</p>
+            <div class="product-footer">
+              <span class="product-price">₹749</span>
+              <div class="product-actions">
+                <button class="btn-cart" onclick="addToCart(6, 'Mixed Blossom Bouquet', 749)">Add to Cart</button>
+                <button class="btn-buynow" onclick="buyNow(6, 'Mixed Blossom Bouquet', 749)">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Orders Section -->
+  <section id="custom">
+    <div class="container">
+      <div class="custom-card">
+        <div class="custom-decoration">
+          <div class="custom-petal cp1">🌸</div>
+          <div class="custom-petal cp2">🌷</div>
+          <div class="custom-petal cp3">🌼</div>
+          <div class="custom-petal cp4">💮</div>
+        </div>
+        <div class="custom-content">
+          <p class="section-eyebrow">✿ Bespoke Creations</p>
+          <h2 class="section-title">Want Something Made Just for You?</h2>
+          <p class="custom-text">
+            Have a vision in mind? A specific colour? A meaningful design? We lovingly craft custom handmade pieces tailored entirely to your heart's desire. From personalised gifts to special occasion bouquets — if you can dream it, we can stitch it.
+          </p>
+          <div class="custom-features">
+            <div class="custom-feat"><span>🎨</span> Custom Colours</div>
+            <div class="custom-feat"><span>📏</span> Custom Sizes</div>
+            <div class="custom-feat"><span>🎁</span> Gift Wrapping</div>
+            <div class="custom-feat"><span>💌</span> Personal Messages</div>
+          </div>
+          <a href="https://wa.me/919478933000?text=Hi%20Riwaayat!%20I%27d%20love%20to%20place%20a%20custom%20order%20🌸" target="_blank" class="btn-whatsapp">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            DM for Custom Orders
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Kind Words</p>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I ordered the Crochet Rose Bouquet for my best friend's birthday and she absolutely loved it! It looks even more beautiful in person. The attention to detail is stunning — you can really feel the love put into it."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div>
+              <p class="author-name">Samaira K.</p>
+              <p class="author-label">Delhi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up" style="--delay: 0.1s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Got the Embroidered Mini Hoop as a custom order for my room and it turned out exactly as I had imagined! The communication was so sweet and the delivery was quick. 10/10 would order again 🌸"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div>
+              <p class="author-name">Priya M.</p>
+              <p class="author-label">Mumbai</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up" style="--delay: 0.2s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Woven Heart Keychains are so adorable! I bought three — one for me and two as gifts. Everyone keeps asking where they're from. So unique and genuinely handmade. Love supporting this small brand!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <p class="author-name">Ananya R.</p>
+              <p class="author-label">Jaipur</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-up" style="--delay: 0.3s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Riwaayat is pure magic. Ordered a custom bouquet for my mom on Mother's Day and it made her cry happy tears. The packaging was gorgeous too — every detail was so thoughtfully done. Truly a heartfelt brand."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">N</div>
+            <div>
+              <p class="author-name">Noor F.</p>
+              <p class="author-label">Lucknow</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Gallery Section -->
+  <section id="instagram">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">@_riwaayat._</p>
+        <h2 class="section-title">Follow Our Journey 🌸</h2>
+        <p class="section-sub">Behind the scenes, new drops, and handmade magic — all on Instagram.</p>
+      </div>
+      <div class="insta-grid">
+        <div class="insta-item" onclick="openGallery(0)">
+          <div class="insta-inner"><span>🌹</span><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div></div>
+        </div>
+        <div class="insta-item" onclick="openGallery(1)">
+          <div class="insta-inner"><span>🌷</span><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div></div>
+        </div>
+        <div class="insta-item" onclick="openGallery(2)">
+          <div class="insta-inner"><span>🧶</span><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div></div>
+        </div>
+        <div class="insta-item" onclick="openGallery(3)">
+          <div class="insta-inner"><span>🌼</span><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div></div>
+        </div>
+        <div class="insta-item" onclick="openGallery(4)">
+          <div class="insta-inner"><span>💮</span><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div></div>
+        </div>
+        <div class="insta-item" onclick="openGallery(5)">
+          <div class="insta-inner"><span>🌸</span><div class="insta-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div></div>
+        </div>
+      </div>
+      <div class="insta-cta">
+        <a href="https://instagram.com/_riwaayat._" target="_blank" class="btn-instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Follow on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev">‹</button>
+    <div class="lightbox-content" id="lightbox-content"></div>
+    <button class="lightbox-next" id="lightbox-next">›</button>
+  </div>
+
+  <!-- Contact / Footer -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-strip">
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <p>WhatsApp Orders</p>
+          <a href="https://wa.me/919876543210" target="_blank">+91 98765 43210</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📸</div>
+          <p>Instagram</p>
+          <a href="https://instagram.com/_riwaayat._" target="_blank">@_riwaayat._</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <p>Email Us</p>
+          <a href="mailto:hello@riwaayat.in">hello@riwaayat.in</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><span class="logo-decor">✿</span> Riwaayat</div>
+          <p class="footer-tagline">Handmade with love, stitched with tradition.</p>
+          <div class="footer-social">
+            <a href="https://instagram.com/_riwaayat._" target="_blank" aria-label="Instagram" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#products">Crochet Flowers</a></li>
+            <li><a href="#products">Bouquets</a></li>
+            <li><a href="#products">Keychains</a></li>
+            <li><a href="#products">Embroidery</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#custom">Custom Orders</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Care Instructions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>🌸 Handmade with love in India &nbsp;|&nbsp; © 2024 Riwaayat. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919478933000?text=Hi%20Riwaayat!%20I%27d%20like%20to%20know%20more%20about%20your%20handmade%20products%20🌸" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="floating-tooltip">Chat with us!</span>
+  </a>
+
+  <script src="riwaayat_script.js"></script>
+</body>
+</html>
